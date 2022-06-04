@@ -9,7 +9,7 @@ const db=mysql.createPool({
     host:"localhost",
     user:"root",
     password:"",
-    database:"cruddatabase"
+    database:"final"
 });
 app.use(cors())
 app.use(express.json())
