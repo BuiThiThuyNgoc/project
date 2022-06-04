@@ -1,0 +1,34 @@
+.ml20{
+    margin-left: 20px I !important;
+}
+.width1000{
+    width: 1000px!important;
+}
+
+.title-heading{
+    height: 55px;
+    font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+    height: 55px;
+    margin-bottom: 20px;
+}
+
+.title-heading:before,
+.title-heading:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+.title-heading:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.title-heading:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
