@@ -48,24 +48,28 @@ CREATE table flight_route(
 
 create table passenger(
     passenger_id int PRIMARY KEY,
-    passenger_name varchar(20),
+    passenger_name varchar(40),
     passenger_ssn INT,
     passenger_phone int,
     passenger_birth date,
     passenger_age int
 );
 go;
-
+create table ticket_type(
+    ticket_type_id int PRIVATE key;
+    ticket_type_name VARCHAR(20)
+)
 create table ticket(
     ticket_id int PRIMARY KEY,
-    ticket_type int,
+    ticket_type_id int,
     ticket_status varchar(4),
-    ticket_location varchar(100),
+    -- ticket_location varchar(100),
     flight_R_id int,
     bill_id int,
     passenger_id int,
     FOREIGN KEY (flight_R_id) REFERENCES flight_route(flight_R_id),
     FOREIGN KEY (bill_id) REFERENCES bill(bill_id),
     FOREIGN KEY (passenger_id) REFERENCES passenger(passenger_id)
+    FOREIGN KEY (ticket_type) REFERENCES ticket_type(ticket_type_id)
 
 );
