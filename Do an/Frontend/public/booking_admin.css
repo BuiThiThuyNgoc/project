@@ -1,0 +1,13 @@
+.title-bookingadmin h1{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.title-bookingadmin .card{
+    margin: 1rem;
+}
+
+.contain-card{
+    margin: 2rem;
+}

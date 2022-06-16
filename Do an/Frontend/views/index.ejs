@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/f044cb29d6.js" crossorigin="anonymous"></script>
+    <title>PONT Airlines</title>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav_brand">
+                <img class="nav_logo" src="img/logo.png" alt="logo">
+                <!--<div class="nav_name">PONT Airlines</div>-->
+                <a href="./index.html" class="nav_name">PONT Airlines</a>
+                <img src="img/logo2.png" alt="" class="nav_logo2">
+            </div>
+            <div class="nav_list">
+                <div class="form_login">
+                    <a href="/login" class="nav_login">Login</a>
+                    <a href="/register" class="nav_register">Register</a>
+                    <div class="nav_search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="nav_location">VIETNAM
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="nav_language">ENGLISH</div>
+                </div>
+                <div class="nav_menu">
+                    <a href="#" class="nav_menu-list">Deals</a>
+                    <a href="/booking" class="nav_menu-list">Booking</a>
+                    <a href="#" class="nav_menu-list">Travel Information</a>
+                    <a href="/aboutus" class="nav_menu-list">About us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="background_nav" style="background-image: url(img/background.png);"></div>
+        </div>
+    </header>
+
+    <div id="content">
+        <p class="title">Explore our most popular flights</p>
+        <ul class="list-ticket">
+            <% Tickets.forEach(element=> {%>
+                <form action="/" method="post">
+                    <li class="ticket">
+                        <div class="ticket--content-img">
+                            <img src="img/content/Hai-Phong-HPH.jpg" alt="">
+                        </div>
+                        <div class="content-text">
+                            <div class="place-time">
+                                <h3 class="heading">
+                                    <%= element.tic_start %> To <%= element.tic_destination %>
+                                </h3>
+                                <p class="start">depart: 01/05/2022</p>
+                            </div>
+                            <div class="inf-ticket">
+                                <span>From</span>
+                                <div class="price">
+                                    <%= element.tic_price %>
+                                </div>
+                                <div class="seen">seen: 1hrs ago</div>
+                                <div class="type">one-way / econcomy</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-buy">Book now</button>
+                    </li>
+                </form>
+                <% }) %>
+        </ul>
+        <!-- <div class="note">*Giá vé hiển thị được thu thập trong vòng 48 giờ và có thể không còn hiệu lực tại thời điểm
+        đặt chỗ. Chúng tôi có thể thu thêm phí và lệ phí cho một số sản phẩm và dịch vụ.</div> -->
+        <h1>TOP DESTINATIONS</h1>
+
+        <div class="top-desti">
+            <div class="list-desc">
+                <div class="desc--item"
+                    style="background-image: url(img/content/Phuquoc_bai_bien_phuquoc_1300x450.jpg);">
+                    <div class="desc-text">
+                        <p class="city">phú quốc - hòn ngọc quý</p>
+                        <div class="btn-discover">khám phá</div>
+                    </div>
+                </div>
+                <div class="desc--item"
+                    style="background-image: url(img/content/Phuquoc_bai_bien_phuquoc_1300x450.jpg);">
+                    <div class="desc-text">
+                        <p class="city">phú quốc - hòn ngọc quý</p>
+                        <div class="btn-discover">khám phá</div>
+                    </div>
+                </div>
+                <div class="desc--item"
+                    style="background-image: url(img/content/Phuquoc_bai_bien_phuquoc_1300x450.jpg);">
+                    <div class="desc-text">
+                        <p class="city">phú quốc - hòn ngọc quý</p>
+                        <div class="btn-discover">khám phá</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-heading">Additional Services</div>
+        <ul class="list-services">
+            <li class="service">
+                <div class="background">
+                    <h3>mua sắm tiện lợi với VNMALL!</h3>
+                </div>
+                <img src="img/content/vnamall-additional.webp" alt="">
+            </li>
+            <li class="service">
+                <div class="background">
+                    <h3>mua sắm tiện lợi với VNMALL!</h3>
+                </div>
+                <img src="img/content/vnamall-additional.webp" alt="">
+            </li>
+            <li class="service">
+                <div class="background">
+                    <h3>mua sắm tiện lợi với VNMALL!</h3>
+                </div>
+                <img src="img/content/vnamall-additional.webp" alt="">
+            </li>
+        </ul>
+
+        <div class="title-heading">Hightlight</div>
+        <ul class="list-hightlight">
+            <li class="hightlight">
+                <div class="container">
+                    <img src="img/content/VIBxVNA_1275x825.webp" alt="">
+                    <div class="content-text">
+                        <div class="title">ưu đãi đặc biệt cho chủ thẻ tín dụng VIB</div>
+                        <div class="desc">khám phá ngay</div>
+                    </div>
+                </div>
+            </li>
+            <li class="hightlight">
+                <div class="container">
+                    <img src="img/content/VIBxVNA_1275x825.webp" alt="">
+                    <div class="content-text">
+                        <div class="title">ưu đãi đặc biệt cho chủ thẻ tín dụng VIB</div>
+                        <div class="desc">khám phá ngay</div>
+                    </div>
+                </div>
+            </li>
+            <li class="hightlight">
+                <div class="container">
+                    <img src="img/content/VIBxVNA_1275x825.webp" alt="">
+                    <div class="content-text">
+                        <div class="title">ưu đãi đặc biệt cho chủ thẻ tín dụng VIB</div>
+                        <div class="desc">khám phá ngay</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+</body>
+
+</html>

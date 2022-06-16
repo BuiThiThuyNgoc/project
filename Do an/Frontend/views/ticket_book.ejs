@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/f044cb29d6.js" crossorigin="anonymous"></script>
+    <title>PONT Airlines</title>
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <div class="nav">
+        <div class="nav_brand">
+            <img class="nav_logo" src="img/logo.png" alt="logo">
+            <!--<div class="nav_name">PONT Airlines</div>-->
+            <a href="./index.html" class="nav_name">PONT Airlines</a>
+            <img src="img/logo2.png" alt="" class="nav_logo2">
+        </div>
+        <div class="nav_list">
+            <div class="form_login">
+                <a href="/login" class="nav_login">Hello, <%= Customer[0].cust_name %> </a>
+                <div class="nav_search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="nav_location">VIETNAM
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="nav_language">ENGLISH</div>
+            </div>
+            <div class="nav_menu">
+                <li class="nav_menu-list">Deals</li>
+                <li class="nav_menu-list">Plan & Bool</li>
+                <li class="nav_menu-list">Travel Information</li>
+                <!--<li class="nav_menu-list">About us</li>-->
+                <a href="/aboutus" class="nav_menu-list">About us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="content">
+    <p class="title">Explore our most popular flights</p>
+    <ul class="list-ticket">
+        <% Tickets.forEach(element => {%> 
+        <form action="/payment" method="post">
+            <li class="ticket">
+                <div class="ticket--content-img">
+                    <img src="img/content/Hai-Phong-HPH.jpg" alt="">
+                </div>
+                <div class="content-text">
+                    <div class="place-time">
+                        <h3 class="heading"><%= element.tic_start %> To <%= element.tic_destination %></h3>
+                        <p class="start">depart: <%= element.Date_Start %> </p>
+                        <p class="start">depart: <%= element.Time_Start %> </p>
+                    </div>
+                    <div class="inf-ticket">
+                        <span>From</span>
+                        <div class="price"><%= element.tic_price %> </div>
+                        <div class="seen">seen: 1hrs ago</div>
+                        <div class="type">one-way / econcomy</div>
+                    </div>
+                </div>
+                <button name="btn_price" type="submit" class="btn-buy" value="<%= element.tic_price %> to <%= element.tic_id %>">Book now</button>
+            </li>
+        </form>
+        <% }) %>
+    </ul>
+</div>
+
+</body>
+</html> 
